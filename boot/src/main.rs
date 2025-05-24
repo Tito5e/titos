@@ -1,3 +1,6 @@
+#![no_std]
+#![no_main]
+
 use uefi::prelude::*;
 use log::info;
 
@@ -5,7 +8,7 @@ use log::info;
 fn efi_main() -> Status {
     uefi::helpers::init().unwrap();
 
-    info!("Hello World!");
+    info!("Hello World");
 
     boot::stall(10_000_000);
 
